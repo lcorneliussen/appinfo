@@ -5,6 +5,7 @@
         public string Title { get; set; }
         public string Description { get; set; }
         public string Copyright { get; set; }
+        public string Product { get; set; }
         public string VersionString { get; set; }
 
         public override string ToString()

@@ -20,6 +20,9 @@ namespace AppInfo
             info.Description = PickOrNull<AssemblyDescriptionAttribute>(
                 attributes, a => a.Description);
 
+            info.Product = PickOrNull<AssemblyProductAttribute>(
+               attributes, a => a.Product);
+
             info.Copyright = PickOrNull<AssemblyCopyrightAttribute>(
                 attributes, a => a.Copyright);
 
