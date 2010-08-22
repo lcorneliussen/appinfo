@@ -26,6 +26,14 @@ namespace AppInfo
             Version assemblyVersion = assembly.GetName().Version;
             info.VersionString = assemblyVersion.Major + "." + assemblyVersion.Minor;
 
+            // appends Build and Revision only if they contain 
+            // any useful information
+            if (assemblyVersion.Build > 0 || assemblyVersion.Revision > 0)
+                info.VersionString += "." + assemblyVersion.Build;
+
+            if (assemblyVersion.Revision > 0)
+                info.VersionString += "." + assemblyVersion.Revision;
+
             return info;
         }
 
